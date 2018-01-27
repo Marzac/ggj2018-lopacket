@@ -8,8 +8,15 @@
 extern SDL_Surface * bgBmp;
 extern SDL_Surface * packetBmp;
 
-extern Mix_Chunk * bdWav;
-Mix_Chunk * musicTracks[2][6];
+extern Mix_Chunk * musicTracks[2][6];
+extern Mix_Chunk * musicKeys[3];
+
+extern Mix_Chunk * musicTimeBeat;
+extern Mix_Chunk * musicTimeDelivered;
+
+extern Mix_Chunk * musicMonster;
+extern Mix_Chunk * musicBird;
+extern Mix_Chunk * musicGear;
 
 /*****************************************************************************/
 void loadAssets();

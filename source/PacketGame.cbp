@@ -32,14 +32,17 @@
 			<Add option="-Wall" />
 			<Add directory="sdl/include" />
 			<Add directory="sdl_mixer/include" />
+			<Add directory="sdl_image/include" />
 		</Compiler>
 		<Linker>
 			<Add library="mingw32" />
 			<Add library="SDL2main" />
 			<Add library="SDL2" />
 			<Add library="SDL2_mixer" />
+			<Add library="SDL2_image" />
 			<Add directory="sdl/lib" />
 			<Add directory="sdl_mixer/lib" />
+			<Add directory="sdl_image/lib" />
 		</Linker>
 		<Unit filename="assets.c">
 			<Option compilerVar="CC" />

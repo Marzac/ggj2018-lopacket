@@ -34,9 +34,6 @@ void playersUpdate()
 
     for (int p = 0; p < 2; p++) {
         Player * player = (Player *) &players[p];
-        player->crankDir = 0;
-        player->crankScramble = 0;
-
         int keyNew = -1;
         for (int i = 0; i < 3; i++) {
             int k = keyboard[playersKeysCode[p][i]];
@@ -58,10 +55,12 @@ void playersUpdate()
         if (dir ==  2) dir = -1;
         player->lastKey = keyNew;
 
+        int channel = CHANNEL_P1K1 + keyNew + 3 * p;
+        Mix_PlayChannel(channel, musicKeys[keyNew], 0);
+
         if (musicBeatWindow)
             player->crankDir = dir;
         else player->crankScramble = 1;
-
 
         if (player->crankDir) printf("Player %i, crank dir %i\n", p, player->crankDir);
         if (player->crankScramble) printf("Player %i, scramble\n", p);

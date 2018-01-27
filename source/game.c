@@ -30,15 +30,11 @@ void gameUpdate()
     int d1 = players[0].crankDir;
     int d2 = players[1].crankDir;
 
-    //if (d1 == d2 && d1 != 0) {
-    if (d1) {
+    if (d1 == d2 && d1 != 0) {
         game.packetCursorNext += (float) d1;
-        if (d1 > 0)
-            musicSetVariation(MUSIC_FULL);
-        else
-            musicSetVariation(MUSIC_BASIC);
+        players[0].crankDir = 0;
+        players[1].crankDir = 0;
     }
-    //}
 
     game.packetCursor = game.packetCursorNext + (game.packetCursor - game.packetCursorNext) * 0.95f;
     gameMakePacketPosition();
