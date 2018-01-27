@@ -41,9 +41,26 @@
 			<Add directory="sdl/lib" />
 			<Add directory="sdl_mixer/lib" />
 		</Linker>
+		<Unit filename="assets.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="assets.h" />
+		<Unit filename="config.h" />
+		<Unit filename="game.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="game.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="music.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="music.h" />
+		<Unit filename="players.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="players.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
