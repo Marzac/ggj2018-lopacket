@@ -12,7 +12,15 @@ extern int musicBeatWindow;
 extern int musicBeatLength;
 
 /*****************************************************************************/
+typedef enum{
+    MUSIC_FULL,
+    MUSIC_BASIC,
+}MUSIC_VARIATION;
+
+/*****************************************************************************/
 void musicInit(int track, float bpm);
 void musicUpdate();
+
+void musicSetVariation(int variation);
 
 #endif

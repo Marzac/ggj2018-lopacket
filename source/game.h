@@ -5,6 +5,7 @@
 
 /*****************************************************************************/
 typedef struct {
+    float packetCursorNext;
     float packetCursor;
     float packetX;
     float packetY;

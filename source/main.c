@@ -28,8 +28,12 @@ int main(int argc, char * argv[])
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
 
     loadAssets();
-    musicInit(0, 120.0f);
+    musicInit(1, 120.0f);
+
     playersInit();
+
+    uint32_t fpsTimeCurrent = SDL_GetTicks();
+    uint32_t fpsTimeLast = fpsTimeCurrent;
 
     int run = 1;
     while(run)
@@ -40,11 +44,15 @@ int main(int argc, char * argv[])
                 run = 0;
 
         musicUpdate();
-        playersUpdate();
 
+        fpsTimeCurrent = SDL_GetTicks();
+        if (fpsTimeCurrent - fpsTimeLast < GAME_FRAME_TIME)
+            continue;
+        fpsTimeLast = fpsTimeCurrent;
+
+        playersUpdate();
         gameUpdate();
         gameDraw();
-
     }
 
     SDL_DestroyWindow(window);

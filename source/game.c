@@ -18,6 +18,7 @@ void gameMakePacketPosition();
 /*****************************************************************************/
 void gameInit()
 {
+    game.packetCursorNext = 0.0f;
     game.packetCursor = 0.0f;
     game.packetX = 0.0f;
     game.packetY = 0.0f;
@@ -31,10 +32,16 @@ void gameUpdate()
 
     //if (d1 == d2 && d1 != 0) {
     if (d1) {
-        game.packetCursor += (float) d1;
-        gameMakePacketPosition();
+        game.packetCursorNext += (float) d1;
+        if (d1 > 0)
+            musicSetVariation(MUSIC_FULL);
+        else
+            musicSetVariation(MUSIC_BASIC);
     }
     //}
+
+    game.packetCursor = game.packetCursorNext + (game.packetCursor - game.packetCursorNext) * 0.95f;
+    gameMakePacketPosition();
 }
 
 void gameDraw()
@@ -82,12 +89,12 @@ void gameMakePacketPosition()
         game.packetX = TRAVEL_STOP_X1;
         game.packetY = TRAVEL_STOP_Y1 + f * TRAVEL_WHEEL_DIAMETER;
     }else if (t < 2 * TRAVEL_LINE_LENGTH + TRAVEL_CURVE_LENGTH) {
-        t -= TRAVEL_LINE_LENGTH - TRAVEL_CURVE_LENGTH;
+        t -= TRAVEL_LINE_LENGTH + TRAVEL_CURVE_LENGTH;
         float f = t / (float) TRAVEL_LINE_LENGTH;
         game.packetX = TRAVEL_START_X2 + f * (TRAVEL_STOP_X2 - TRAVEL_START_X2);
         game.packetY = TRAVEL_START_Y2 + f * (TRAVEL_STOP_Y2 - TRAVEL_START_Y2);
     }else{
-        t -= 2 * TRAVEL_LINE_LENGTH - TRAVEL_CURVE_LENGTH;
+        t -= 2 * TRAVEL_LINE_LENGTH + TRAVEL_CURVE_LENGTH;
         float f = t / (float) TRAVEL_CURVE_LENGTH;
         game.packetX = TRAVEL_STOP_X2;
         game.packetY = TRAVEL_STOP_Y2 - f * TRAVEL_WHEEL_DIAMETER;
