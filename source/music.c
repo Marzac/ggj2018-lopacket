@@ -52,7 +52,16 @@ void musicInit(int track, float bpm)
     musicSetVariation(MUSIC_BASIC);
 }
 
+/*****************************************************************************/
 void musicUpdate()
+{
+    for (int c = 0; c < 6; c++) {
+        musicTrackLevels[c] = musicTrackLevelsNext[c] - (musicTrackLevelsNext[c] - musicTrackLevels[c]) * 0.995f;
+        Mix_VolumeChunk(musicTracks[musicTrack][c], musicTrackLevels[c]);
+    }
+}
+
+void musicUpdateRealtime()
 {
     timeCurrent = SDL_GetTicks();
     timeAcc += timeCurrent - timeLast;
@@ -86,9 +95,13 @@ void musicUpdate()
 void musicSetVariation(int variation)
 {
     musicVariationLength = 0;
-    if (musicTrack == 1) {
+    musicVariation = variation;
+
+    if (musicTrack == 0) {
         memset(musicTrackLevelsNext, 0, 6 * sizeof(float));
-        musicVariation = variation;
+        musicTrackLevelsNext[0] = 128.0f;
+    }else if (musicTrack >= 1) {
+        memset(musicTrackLevelsNext, 0, 6 * sizeof(float));
         if (musicVariation == MUSIC_FULL) {
             musicTrackLevelsNext[3] = 100.0f * 0.50f;
             musicTrackLevelsNext[4] = 128.0f * 1.0f;
@@ -107,15 +120,3 @@ void musicSetVariation(int variation)
         }
     }
 }
-
-/*****************************************************************************/
-void musicPlay()
-{
-    //1.0 / 1.0f + t / FPS
-    for (int c = 0; c < 6; c++) {
-        musicTrackLevels[c] = musicTrackLevelsNext[c] - (musicTrackLevelsNext[c] - musicTrackLevels[c]) * 0.995f;
-        Mix_VolumeChunk(musicTracks[musicTrack][c], musicTrackLevels[c]);
-    }
-}
-
-

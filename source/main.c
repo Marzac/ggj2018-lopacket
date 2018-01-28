@@ -15,9 +15,6 @@ SDL_Window * window = NULL;
 SDL_Surface * screen = NULL;
 SDL_Renderer * render = NULL;
 
-int level = 0;
-const levelBaseBPM[5] = {70, 100, 130, 160, 200};
-float bpm = 70;
 
 /*****************************************************************************/
 int main(int argc, char * argv[])
@@ -36,12 +33,8 @@ int main(int argc, char * argv[])
 
     loadAssets();
 
-// Start of a level
-    bpm = levelBaseBPM[level];
-
-    musicInit(level + 1, bpm);
-    playersInit();
-    gameInit();
+    //gameInitMenu(0);
+    gameInitLevel(0);
 
     uint32_t fpsTimeCurrent = SDL_GetTicks();
     uint32_t fpsTimeLast = fpsTimeCurrent;
@@ -54,17 +47,14 @@ int main(int argc, char * argv[])
             if(event.type == SDL_QUIT)
                 run = 0;
 
-        musicUpdate();
+        musicUpdateRealtime();
 
         fpsTimeCurrent = SDL_GetTicks();
         if (fpsTimeCurrent - fpsTimeLast < GAME_FRAME_TIME)
             continue;
         fpsTimeLast = fpsTimeCurrent;
 
-        musicPlay();
-        playersUpdate();
         gameUpdate();
-        gameDraw();
     }
 
     SDL_DestroyWindow(window);

@@ -9,6 +9,8 @@ typedef struct {
 
     int crankDir;
     int crankScramble;
+    int ready;
+
 }Player;
 
 extern Player players[2];

@@ -37,8 +37,8 @@ typedef enum{
 
 /*****************************************************************************/
 void musicInit(int track, float bpm);
+void musicUpdateRealtime();
 void musicUpdate();
-void musicPlay();
 
 void musicSetVariation(int variation);
 

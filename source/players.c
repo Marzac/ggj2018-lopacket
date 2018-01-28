@@ -22,9 +22,11 @@ Player players[2];
 void playersInit()
 {
     for (int p = 0; p < 2; p++) {
-        memset(players[p].keysState, 0, sizeof(int) * 3);
-        memset(players[p].keysStamp, 0, sizeof(int) * 3);
-        players[p].lastKey = -1;
+        Player * player = &players[p];
+        memset(player->keysState, 0, sizeof(int) * 3);
+        memset(player->keysStamp, 0, sizeof(int) * 3);
+        player->lastKey = -1;
+        player->ready = 0;
     }
 }
 
@@ -44,6 +46,7 @@ void playersUpdate()
             player->keysState[i] = k;
         }
         if (keyNew < 0) continue;
+        player->ready = 1;
 
         if (player->lastKey < 0) {
             player->lastKey = keyNew;
