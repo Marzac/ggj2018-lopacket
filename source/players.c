@@ -87,6 +87,7 @@ void playersUpdate()
 
         if (musicBeatWindow) {
             player->crankDir = dir;
+            player->crankScramble = 0;
             game.gearAnglesNext[p] += 45.0f * dir;
         }else player->crankScramble = 1;
 

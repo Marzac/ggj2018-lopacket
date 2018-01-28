@@ -51,6 +51,7 @@ int main(int argc, char * argv[])
     window = SDL_CreateWindow("GGJ2018 : Transmission of Love", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     screen = SDL_GetWindowSurface(window);
     render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
 
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 256);
     Mix_AllocateChannels(16);

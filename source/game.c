@@ -64,9 +64,9 @@ void gameItemInit();
 void gameItemUpdate();
 
 /*****************************************************************************/
-#define MAX_LEVEL   7
-const int levelBPM[MAX_LEVEL]   = {70, 100, 130, 160, 200};
-const int levelBirds[MAX_LEVEL] = {3, 1, 1, 2, 2, 1, 3};
+#define MAX_LEVEL   3
+const int levelBPM[MAX_LEVEL]   = {70, 100, 200};
+const int levelBirds[MAX_LEVEL] = {2, 3, 5};
 
 /*****************************************************************************/
 #define TRAVEL_LINE_LENGTH      20
@@ -154,6 +154,16 @@ void gameUpdate()
             gameInitLevel(0);
 
     }else if (game.state == STATE_CREDIT2) {
+        game.counter --;
+        if (!game.counter) {
+            game.counter = 6 * 60;
+            game.state = STATE_CREDIT3;
+        }
+
+        if (players[0].ready || players[1].ready)
+            gameInitLevel(0);
+
+    }else if (game.state == STATE_CREDIT3) {
         game.counter --;
         if (!game.counter) {
             game.counter = 6 * 60;
@@ -400,7 +410,24 @@ void gameDraw()
             pos.h = 27;
             SDL_RenderCopy(render, oinkTxt[1], NULL, &pos);
         }
+    }
 
+    if (game.state > STATE_GO) {
+        if (players[0].crankScramble) {
+            pos.x = 260 - 8;
+            pos.y = 212+12;
+            pos.w = 104;
+            pos.h = 27;
+            SDL_RenderCopy(render, oinkTxt[2], NULL, &pos);
+        }
+
+        if (players[1].crankScramble) {
+            pos.x = 1112 - 8;
+            pos.y = 226;
+            pos.w = 104;
+            pos.h = 27;
+            SDL_RenderCopy(render, oinkTxt[2], NULL, &pos);
+        }
     }
 
     if (game.state == STATE_CREDIT1) {
@@ -417,6 +444,24 @@ void gameDraw()
         pos.w = 573;
         pos.h = 299;
         SDL_RenderCopy(render, creditTxt[1], NULL, &pos);
+    }
+
+    if (game.state == STATE_CREDIT3) {
+        pos.x = 448;
+        pos.y = 384 - 48;
+        pos.w = 554;
+        pos.h = 282;
+        SDL_RenderCopy(render, creditTxt[2], NULL, &pos);
+    }
+
+    if (game.state == STATE_CREDIT1 ||
+        game.state == STATE_CREDIT2 ||
+        game.state == STATE_CREDIT3) {
+        pos.x = 256-16;
+        pos.y = 0;
+        pos.w = 936;
+        pos.h = 159;
+        SDL_RenderCopy(render, titleTxt, NULL, &pos);
     }
 
     SDL_RenderPresent(render);

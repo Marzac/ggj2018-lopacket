@@ -58,7 +58,7 @@ void musicInit(int track, float bpm)
     musicBeatLength = (uint32_t) ((60.0f * 1000.0f) / bpm);
     musicBeatWindow = 1;
 
-    if (track > 2) track = 2;
+    if (track > 0) track = 1 + ((track - 1) % 3);
 
     musicTrack = track;
     memset(musicTrackLevels, 0, 6 * sizeof(float));
@@ -135,20 +135,20 @@ void musicSetVariation(int variation)
     }else if (musicTrack >= 1) {
         memset(musicTrackLevelsNext, 0, 6 * sizeof(float));
         if (musicVariation == MUSIC_FULL) {
-            musicTrackLevelsNext[3] = 100.0f * 0.50f;
-            musicTrackLevelsNext[4] = 128.0f * 1.0f;
-            musicTrackLevelsNext[5] = 128.0f * 0.75f;
+            musicTrackLevelsNext[3] = 100.0f * 0.50f * 0.75f;
+            musicTrackLevelsNext[4] = 128.0f * 1.0f * 0.75f;
+            musicTrackLevelsNext[5] = 128.0f * 0.75f * 0.75f;
         }else if (musicVariation == MUSIC_MEDIUM_HIGH) {
-            musicTrackLevelsNext[3] = 128.f * 1.00f;
+            musicTrackLevelsNext[3] = 128.f * 1.00f * 0.75f;
         }else if (musicVariation == MUSIC_MEDIUM_LOW) {
-            musicTrackLevelsNext[5] = 128.f * 1.00f;
-            musicTrackLevelsNext[1] = 128.f * 1.00f;
+            musicTrackLevelsNext[5] = 128.f * 1.00f * 0.75f;
+            musicTrackLevelsNext[1] = 128.f * 1.00f * 0.75f;
         }else if (musicVariation == MUSIC_FULL) {
-            musicTrackLevelsNext[3] = 100.0f * 0.50f;
-            musicTrackLevelsNext[4] = 128.0f * 1.0f;
-            musicTrackLevelsNext[5] = 128.0f * 0.75f;
+            musicTrackLevelsNext[3] = 100.0f * 0.50f * 0.75f;
+            musicTrackLevelsNext[4] = 128.0f * 1.0f * 0.75f;
+            musicTrackLevelsNext[5] = 128.0f * 0.75f * 0.75f;
         }else if (musicVariation == MUSIC_BASIC) {
-            musicTrackLevelsNext[2] = 128.0f;
+            musicTrackLevelsNext[2] = 128.0f * 0.75f;
         }
     }
 }

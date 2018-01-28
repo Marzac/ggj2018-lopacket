@@ -39,9 +39,9 @@ extern SDL_Surface * getReadyBmp;
 extern SDL_Surface * vogelBmp[9];
 extern SDL_Surface * vogelBackBmp[9];
 extern SDL_Surface * pigsBmp[2];
-extern SDL_Surface * oinkBmp[2];
-extern SDL_Surface * creditBmp[2];
-
+extern SDL_Surface * oinkBmp[3];
+extern SDL_Surface * creditBmp[3];
+extern SDL_Surface * titleBmp;
 
 extern SDL_Texture * skyTxt;
 extern SDL_Texture * waterTxt;
@@ -54,10 +54,11 @@ extern SDL_Texture * getReadyTxt;
 extern SDL_Texture * vogelTxt[9];
 extern SDL_Texture * vogelBackTxt[9];
 extern SDL_Texture * pigsTxt[2];
-extern SDL_Texture * oinkTxt[2];
-extern SDL_Texture * creditTxt[2];
+extern SDL_Texture * oinkTxt[3];
+extern SDL_Texture * creditTxt[3];
+extern SDL_Texture * titleTxt;
 
-extern Mix_Chunk * musicTracks[3][6];
+extern Mix_Chunk * musicTracks[4][6];
 extern Mix_Chunk * musicKeys[3];
 
 extern Mix_Chunk * musicTimeBeat;

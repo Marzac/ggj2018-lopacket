@@ -51,9 +51,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="333.63934"
-     inkscape:cy="539.59954"
+     inkscape:zoom="0.35"
+     inkscape:cx="800.99598"
+     inkscape:cy="-646.72848"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -252,37 +252,50 @@
        transform="matrix(0.45193655,-0.00516272,0.00516272,0.45193655,105.95727,46.503072)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.58333397px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
        x="118.53333"
-       y="195.39999"
-       id="text4685"><tspan
+       y="203.86665"
+       id="text4685"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4683"
          x="118.53333"
-         y="195.39999"
-         style="stroke-width:0.26458335">Credits</tspan></text>
+         y="203.86665"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';stroke-width:0.26458335">Credits</tspan></text>
     <text
        id="text4691"
-       y="212.33331"
+       y="220.79997"
        x="127"
-       style="font-style:normal;font-weight:normal;font-size:10.58333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.26458335"
-         y="212.33331"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222241px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335;"
+       xml:space="preserve"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;font-size:9.17222241px;"
+         y="220.79997"
          x="127"
          id="tspan4689"
-         sodipodi:role="line">Graphics: Till Gillsbach</tspan></text>
+         sodipodi:role="line">Graphics: <tspan
+   style="-inkscape-font-specification:'Verdana Bold';font-family:Verdana;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.17222241px;"
+   id="tspan5117">Till Gillsbach</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222241px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335;"
        x="127"
-       y="229.26665"
-       id="text4695"><tspan
+       y="237.73331"
+       id="text4695"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4693"
          x="127"
-         y="229.26665"
-         style="stroke-width:0.26458335">Code: Fred 'Marzac' Meslin</tspan></text>
+         y="237.73331"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;font-size:9.17222241px;">Code: <tspan
+   style="-inkscape-font-specification:'Verdana Bold';font-family:Verdana;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.17222241px;"
+   id="tspan5119">Fred 'Marzac' Meslin</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46666718px;line-height:1.25;font-family:'Segoe Print';-inkscape-font-specification:'Segoe Print Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
@@ -311,5 +324,436 @@
          y="127.66665"
          x="71.966667"
          sodipodi:role="line">Oink!</tspan></text>
+    <text
+       id="text5103"
+       y="254.66664"
+       x="127"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.61672242px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335;"
+       xml:space="preserve"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;font-size:9.61672242px;"
+         y="254.66664"
+         x="127"
+         sodipodi:role="line"
+         id="tspan5109">Music: <tspan
+   style="-inkscape-font-specification:'Verdana Bold';font-family:Verdana;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.61672242px;"
+   id="tspan5121">Francisco Chaves</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222241px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335;"
+       x="127"
+       y="271.59998"
+       id="text5115"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         id="tspan5113"
+         sodipodi:role="line"
+         x="127"
+         y="271.59998"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;font-size:9.17222241px;">Sound: <tspan
+   style="-inkscape-font-specification:'Verdana Bold';font-family:Verdana;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.17222241px;"
+   id="tspan5123">Christian Le Fou</tspan></tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits2.png"
+       id="text5127"
+       y="330.86667"
+       x="118.53333"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.58333397px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';stroke-width:0.26458335"
+         y="330.86667"
+         x="118.53333"
+         id="tspan5125"
+         sodipodi:role="line">Credits</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits2.png"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222214px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       x="126.99999"
+       y="347.79999"
+       id="text5133"><tspan
+         sodipodi:role="line"
+         id="tspan5131"
+         x="126.99999"
+         y="347.79999"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222214px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335">For the <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:'Verdana Bold'"
+   id="tspan5153">Global Game Jam</tspan></tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits1.png"
+       id="text5139"
+       y="356.26663"
+       x="127"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222214px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222214px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335"
+         y="364.63474"
+         x="127"
+         id="tspan5137"
+         sodipodi:role="line" /></text>
+    <text
+       id="text5159"
+       y="364.73334"
+       x="126.99999"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222214px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       xml:space="preserve"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222214px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335"
+         y="364.73334"
+         x="126.99999"
+         id="tspan5157"
+         sodipodi:role="line">Bonn, the 9th, 28 / 01 / 2018</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5161"
+       style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458334,0,0,0.26458334,-5.2541015e-6,71.248387)"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><flowRegion
+         id="flowRegion5163"
+         style="font-size:24px"><rect
+           id="rect5165"
+           width="576"
+           height="297.95312"
+           x="480"
+           y="1152"
+           style="font-size:24px" /></flowRegion><flowPara
+         style="font-size:25.33333397px;text-align:justify;text-anchor:start"
+         id="flowPara5173">Florian Wurth, Lea Dickert, Janis Langer, Felix Rossmann, Steffen Plohmann, Stanislaw Schlosser, Jurek Malottke, Paul Kolvenbach, Andreas Brillen</flowPara></flowRoot>    <image
+       y="93.799988"
+       x="15.610415"
+       id="image5193"
+       xlink:href="data:image/png;base64,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
+"
+       preserveAspectRatio="none"
+       height="56.091667"
+       width="330.20001" />
+    <text
+       inkscape:export-ydpi="95"
+       inkscape:export-xdpi="95"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\grunz.png"
+       id="text5198"
+       y="161.53333"
+       x="67.733337"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46666718px;line-height:1.25;font-family:'Segoe Print';-inkscape-font-specification:'Segoe Print Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       xml:space="preserve"><tspan
+         id="tspan5196"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46666718px;font-family:'Segoe Print';-inkscape-font-specification:'Segoe Print Bold';text-align:center;text-anchor:middle;stroke:#130705;stroke-width:0.26458335;stroke-opacity:0.54901961"
+         y="161.53333"
+         x="67.733337"
+         sodipodi:role="line">Grunz!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.58333397px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       x="118.53334"
+       y="449.39999"
+       id="text5202"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan5200"
+         x="118.53334"
+         y="449.39999"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';stroke-width:0.26458335">The plot</tspan></text>
+    <text
+       id="text5208"
+       y="584.86664"
+       x="127"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666684px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335;"
+       xml:space="preserve"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits3.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666684px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;"
+         y="584.86664"
+         x="127"
+         id="tspan5206"
+         sodipodi:role="line">Turn the <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';font-size:8.46666684px;"
+   id="tspan5280">gears</tspan> in <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';font-size:8.46666684px;"
+   id="tspan5282">rythm</tspan>, in order</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666684px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;"
+         y="596.33191"
+         x="127"
+         sodipodi:role="line"
+         id="tspan5222">to show your partner how much</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666684px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;"
+         y="607.79718"
+         x="127"
+         sodipodi:role="line"
+         id="tspan5224">you do care! </tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666684px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;"
+         y="619.26245"
+         x="127"
+         sodipodi:role="line"
+         id="tspan5228" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666684px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;"
+         y="630.72772"
+         x="127"
+         sodipodi:role="line"
+         id="tspan5226">But be careful of the birds of anger,</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666684px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:0.26458335;"
+         y="642.19305"
+         x="127"
+         sodipodi:role="line"
+         id="tspan5230">as they might ruin your <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';font-size:8.46666684px;"
+   id="tspan5278">love</tspan>.</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Fred\Documents\Projects\ggj2018-lopacket\source\assets\credits3.png"
+       id="text5252"
+       y="567.93335"
+       x="118.53333"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.58333397px;line-height:1.25;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';stroke-width:0.26458335"
+         y="567.93335"
+         x="118.53333"
+         id="tspan5250"
+         sodipodi:role="line">The Plot</tspan></text>
   </g>
 </svg>

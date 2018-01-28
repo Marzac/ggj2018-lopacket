@@ -17,8 +17,9 @@ SDL_Surface * getReadyBmp;
 SDL_Surface * vogelBmp[9];
 SDL_Surface * vogelBackBmp[9];
 SDL_Surface * pigsBmp[2];
-SDL_Surface * oinkBmp[2];
-SDL_Surface * creditBmp[2];
+SDL_Surface * oinkBmp[3];
+SDL_Surface * creditBmp[3];
+SDL_Surface * titleBmp;
 
 SDL_Texture * skyTxt;
 SDL_Texture * waterTxt;
@@ -31,10 +32,11 @@ SDL_Texture * getReadyTxt;
 SDL_Texture * vogelTxt[9];
 SDL_Texture * vogelBackTxt[9];
 SDL_Texture * pigsTxt[2];
-SDL_Texture * oinkTxt[2];
-SDL_Texture * creditTxt[2];
+SDL_Texture * oinkTxt[3];
+SDL_Texture * creditTxt[3];
+SDL_Texture * titleTxt;
 
-Mix_Chunk * musicTracks[3][6];
+Mix_Chunk * musicTracks[4][6];
 Mix_Chunk * musicKeys[3];
 
 Mix_Chunk * musicTimeBeat;
@@ -59,8 +61,11 @@ void loadAssets()
     pigsBmp[1] = IMG_Load("assets/pig2.png");
     oinkBmp[0] = IMG_Load("assets/oink1.png");
     oinkBmp[1] = IMG_Load("assets/oink2.png");
+    oinkBmp[2] = IMG_Load("assets/grunz.png");
     creditBmp[0] = IMG_Load("assets/credits1.png");
     creditBmp[1] = IMG_Load("assets/credits2.png");
+    creditBmp[2] = IMG_Load("assets/credits3.png");
+    titleBmp = IMG_Load("assets/title.png");
 
     char path[] = "assets/bx-s.png";
     for (int b = 0; b < 9; b++) {
@@ -88,8 +93,12 @@ void loadAssets()
     pigsTxt[1] = SDL_CreateTextureFromSurface(render, pigsBmp[1]);
     oinkTxt[0] = SDL_CreateTextureFromSurface(render, oinkBmp[0]);
     oinkTxt[1] = SDL_CreateTextureFromSurface(render, oinkBmp[1]);
+    oinkTxt[2] = SDL_CreateTextureFromSurface(render, oinkBmp[2]);
+
     creditTxt[0] = SDL_CreateTextureFromSurface(render, creditBmp[0]);
     creditTxt[1] = SDL_CreateTextureFromSurface(render, creditBmp[1]);
+    creditTxt[2] = SDL_CreateTextureFromSurface(render, creditBmp[2]);
+    titleTxt = SDL_CreateTextureFromSurface(render, titleBmp);
 
 // General
     musicTimeBeat = Mix_LoadWAV("assets/music/general/TIME-BEAT.wav");
@@ -97,7 +106,6 @@ void loadAssets()
 
     musicBird = Mix_LoadWAV("assets/music/general/BIRD.wav");
     musicGear = Mix_LoadWAV("assets/music/general/GEAR.wav");
-
 
 // Level1 music
     musicTracks[0][0] = Mix_LoadWAV("assets/music/menu/MENU.wav");
@@ -114,12 +122,19 @@ void loadAssets()
     musicTracks[1][4] = Mix_LoadWAV("assets/music/level1/STRINGS-EXTRA-BASSES.wav");
     musicTracks[1][5] = Mix_LoadWAV("assets/music/level1/KEYBOARDS-EXTRA.wav");
 
-    musicTracks[2][0] = NULL;
-    musicTracks[2][1] = NULL;
-    musicTracks[2][2] = NULL;
-    musicTracks[2][3] = NULL;
-    musicTracks[2][4] = NULL;
-    musicTracks[2][5] = NULL;
+    musicTracks[2][0] = Mix_LoadWAV("assets/music/level2/STRINGS-NO-VLNS.wav");
+    musicTracks[2][1] = Mix_LoadWAV("assets/music/level2/STRINGS-NO-VLN-1.wav");
+    musicTracks[2][2] = Mix_LoadWAV("assets/music/level2/STRINGS-NO-VLN-2.wav");
+    musicTracks[2][3] = Mix_LoadWAV("assets/music/level2/STRINGS-ALL.wav");
+    musicTracks[2][4] = Mix_LoadWAV("assets/music/level2/STRINGS-EXTRA-BASSES.wav");
+    musicTracks[2][5] = Mix_LoadWAV("assets/music/level2/KEYBOARDS-EXTRA.wav");
+
+    musicTracks[3][0] = Mix_LoadWAV("assets/music/level3/STRINGS-NO-VLNS.wav");
+    musicTracks[3][1] = Mix_LoadWAV("assets/music/level3/STRINGS-NO-VLN-1.wav");
+    musicTracks[3][2] = Mix_LoadWAV("assets/music/level3/STRINGS-NO-VLN-2.wav");
+    musicTracks[3][3] = Mix_LoadWAV("assets/music/level3/STRINGS-ALL.wav");
+    musicTracks[3][4] = Mix_LoadWAV("assets/music/level3/STRINGS-EXTRA-BASSES.wav");
+    musicTracks[3][5] = Mix_LoadWAV("assets/music/level3/KEYBOARDS-EXTRA.wav");
 
 // Percussions
     musicKeys[0] = Mix_LoadWAV("assets/music/general/TASTER-1.wav");

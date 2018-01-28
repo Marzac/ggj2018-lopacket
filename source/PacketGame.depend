@@ -338,7 +338,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1517147951 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\assets.c
+1517151899 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\assets.c
 	"config.h"
 	"assets.h"
 	<SDL.h>
@@ -688,11 +688,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1517148808 c:\users\fred\documents\projects\ggj2018-lopacket\source\assets.h
+1517151892 c:\users\fred\documents\projects\ggj2018-lopacket\source\assets.h
 	<SDL.h>
 	<SDL_mixer.h>
 
-1517147537 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\game.c
+1517152417 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\game.c
 	"config.h"
 	"assets.h"
 	"game.h"
@@ -703,7 +703,7 @@
 	<stdint.h>
 	<math.h>
 
-1517147589 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\music.c
+1517150744 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\music.c
 	"config.h"
 	"assets.h"
 	"game.h"
@@ -714,7 +714,7 @@
 	<stdint.h>
 	<string.h>
 
-1517137059 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\players.c
+1517151291 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\players.c
 	"config.h"
 	"assets.h"
 	"game.h"
@@ -725,7 +725,7 @@
 	<string.h>
 	<stdint.h>
 
-1517147258 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\main.c
+1517152478 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\main.c
 	"config.h"
 	"assets.h"
 	"game.h"
@@ -740,13 +740,13 @@
 	<SDL.h>
 	<SDL_mixer.h>
 
-1517146784 c:\users\fred\documents\projects\ggj2018-lopacket\source\game.h
+1517151843 c:\users\fred\documents\projects\ggj2018-lopacket\source\game.h
 	<stdint.h>
 
-1517148088 c:\users\fred\documents\projects\ggj2018-lopacket\source\music.h
+1517148825 c:\users\fred\documents\projects\ggj2018-lopacket\source\music.h
 	<stdint.h>
 
-1517137059 c:\users\fred\documents\projects\ggj2018-lopacket\source\players.h
+1517148825 c:\users\fred\documents\projects\ggj2018-lopacket\source\players.h
 
 1508772769 c:\users\fred\documents\projects\ggj2018-lopacket\source\sdl_image\include\sdl_image.h
 	"SDL.h"
