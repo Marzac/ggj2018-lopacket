@@ -1,3 +1,27 @@
+/*
+The MIT License (MIT)
+Copyright (c) 2015-2018 The Love transmission team
+Till Gilsbach, Frederic Meslin, Francisco Chaves, Christian LeFou
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
 #include "config.h"
 #include "assets.h"
 #include "game.h"
@@ -64,9 +88,23 @@ const int levelBirds[MAX_LEVEL] = {3, 1, 1, 2, 2, 1, 3};
 /*****************************************************************************/
 void gameInitMenu()
 {
-    game.state = STATE_MENU;
+    game.state = STATE_CREDIT1;
     game.bpm = 120;
     game.level = -1;
+    game.counter = 6 * 60;
+
+    playersInit();
+
+    game.packetCursorNext = 0.0f;
+    game.packetCursor = 0.0f;
+    gameMakePacketPosition();
+
+    game.waterHeight = 600;
+    game.gearAngles[0] = 0.0f;
+    game.gearAngles[1] = 0.0f;
+    game.gearAnglesNext[0] = 0.0f;
+    game.gearAnglesNext[1] = 0.0f;
+    gameItemInit();
 
     musicInit(0, 120);
 }
@@ -74,12 +112,14 @@ void gameInitMenu()
 void gameInitLevel(int level)
 {
     game.state = STATE_STEADY;
-
     game.bpm = levelBPM[level];
     game.level = level;
 
     gameBirdsInit(levelBirds[level]);
     gameBirdsInitFake(16);
+
+    gameBirdsUpdate();
+    gameBirdsFakeUpdate();
 
     playersInit();
 
@@ -104,7 +144,26 @@ void gameUpdate()
 {
     playersUpdate();
 
-    if (game.state == STATE_STEADY) {
+    if (game.state == STATE_CREDIT1) {
+        game.counter --;
+        if (!game.counter) {
+            game.counter = 6 * 60;
+            game.state = STATE_CREDIT2;
+        }
+        if (players[0].ready || players[1].ready)
+            gameInitLevel(0);
+
+    }else if (game.state == STATE_CREDIT2) {
+        game.counter --;
+        if (!game.counter) {
+            game.counter = 6 * 60;
+            game.state = STATE_CREDIT1;
+        }
+
+        if (players[0].ready || players[1].ready)
+            gameInitLevel(0);
+
+    }else if (game.state == STATE_STEADY) {
         if (players[0].ready && players[1].ready) {
             game.state = STATE_GO;
             game.counter = 60;
@@ -129,6 +188,8 @@ void gameUpdate()
             game.state = STATE_EXCHANGE;
             game.itemAttached = ITEM_PIG;
             game.itemAttachedIndex = 1;
+            Mix_PlayChannel(CHANNEL_OTHERS, musicTimeDelivered, 0);
+
         }
         gameUpdateGears();
         gameBirdsUpdate();
@@ -139,6 +200,7 @@ void gameUpdate()
             game.state = STATE_RUN_LEFT;
             game.itemAttached = ITEM_BASKET;
             game.itemAttachedIndex = 0;
+            musicSetVariation(MUSIC_MEDIUM_HIGH);
         }
 
         gameUpdateGears();
@@ -151,6 +213,8 @@ void gameUpdate()
             game.itemAttached = ITEM_PIG;
             game.itemAttachedIndex = 0;
             game.counter = 60;
+
+            Mix_PlayChannel(CHANNEL_OTHERS, musicTimeDelivered, 0);
         }
 
         gameUpdateGears();
@@ -176,6 +240,7 @@ void gameUpdate()
               game.state == STATE_STOLEN_TREFLE) {
         if (game.itemX < 0 || game.itemX > SCREEN_WIDTH)
             game.state = STATE_REWIND;
+
         gameUpdateGears();
         gameBirdsUpdate();
         gameBirdsFakeUpdate();
@@ -337,21 +402,36 @@ void gameDraw()
         }
 
     }
+
+    if (game.state == STATE_CREDIT1) {
+        pos.x = 448;
+        pos.y = 384 - 48;
+        pos.w = 505;
+        pos.h = 269;
+        SDL_RenderCopy(render, creditTxt[0], NULL, &pos);
+    }
+
+    if (game.state == STATE_CREDIT2) {
+        pos.x = 448;
+        pos.y = 384 - 48;
+        pos.w = 573;
+        pos.h = 299;
+        SDL_RenderCopy(render, creditTxt[1], NULL, &pos);
+    }
+
     SDL_RenderPresent(render);
 }
 
 /*****************************************************************************/
 void gameUpdateGears()
 {
-    //game.packetCursorNext += 0.04;
-    //return;
-
     int d1 = players[0].crankDir;
     int d2 = players[1].crankDir;
     if (d1 == d2 && d1 != 0) {
         game.packetCursorNext += (float) d1;
         players[0].crankDir = 0;
         players[1].crankDir = 0;
+        Mix_PlayChannel(CHANNEL_OTHERS, musicGear, 0);
     }
 }
 
@@ -410,6 +490,10 @@ void gameBirdsUpdate()
         if (d < 24.0f * 24.0f) {
             game.itemAttached = ITEM_BIRD;
             game.itemAttachedIndex = i;
+            musicSetVariation(MUSIC_FULL);
+            Mix_PlayChannel(CHANNEL_MONSTERS, musicBird, 0);
+            Mix_PlayChannel(CHANNEL_MONSTERS, musicBird, 0);
+
             if (game.state < STATE_RUN_LEFT)
                 game.state = STATE_STOLEN_TREFLE;
             else game.state = STATE_STOLEN_HEART;

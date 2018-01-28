@@ -18,6 +18,7 @@ SDL_Surface * vogelBmp[9];
 SDL_Surface * vogelBackBmp[9];
 SDL_Surface * pigsBmp[2];
 SDL_Surface * oinkBmp[2];
+SDL_Surface * creditBmp[2];
 
 SDL_Texture * skyTxt;
 SDL_Texture * waterTxt;
@@ -31,6 +32,7 @@ SDL_Texture * vogelTxt[9];
 SDL_Texture * vogelBackTxt[9];
 SDL_Texture * pigsTxt[2];
 SDL_Texture * oinkTxt[2];
+SDL_Texture * creditTxt[2];
 
 Mix_Chunk * musicTracks[3][6];
 Mix_Chunk * musicKeys[3];
@@ -57,6 +59,8 @@ void loadAssets()
     pigsBmp[1] = IMG_Load("assets/pig2.png");
     oinkBmp[0] = IMG_Load("assets/oink1.png");
     oinkBmp[1] = IMG_Load("assets/oink2.png");
+    creditBmp[0] = IMG_Load("assets/credits1.png");
+    creditBmp[1] = IMG_Load("assets/credits2.png");
 
     char path[] = "assets/bx-s.png";
     for (int b = 0; b < 9; b++) {
@@ -84,13 +88,19 @@ void loadAssets()
     pigsTxt[1] = SDL_CreateTextureFromSurface(render, pigsBmp[1]);
     oinkTxt[0] = SDL_CreateTextureFromSurface(render, oinkBmp[0]);
     oinkTxt[1] = SDL_CreateTextureFromSurface(render, oinkBmp[1]);
+    creditTxt[0] = SDL_CreateTextureFromSurface(render, creditBmp[0]);
+    creditTxt[1] = SDL_CreateTextureFromSurface(render, creditBmp[1]);
 
 // General
     musicTimeBeat = Mix_LoadWAV("assets/music/general/TIME-BEAT.wav");
     musicTimeDelivered = Mix_LoadWAV("assets/music/general/TIME-DELIVERED.wav");
 
+    musicBird = Mix_LoadWAV("assets/music/general/BIRD.wav");
+    musicGear = Mix_LoadWAV("assets/music/general/GEAR.wav");
+
+
 // Level1 music
-    musicTracks[0][0] = NULL;
+    musicTracks[0][0] = Mix_LoadWAV("assets/music/menu/MENU.wav");
     musicTracks[0][1] = NULL;
     musicTracks[0][2] = NULL;
     musicTracks[0][3] = NULL;
