@@ -13,6 +13,7 @@
 /*****************************************************************************/
 SDL_Window * window = NULL;
 SDL_Surface * screen = NULL;
+SDL_Renderer * render = NULL;
 
 int level = 0;
 const levelBaseBPM[5] = {70, 100, 130, 160, 200};
@@ -28,15 +29,19 @@ int main(int argc, char * argv[])
 
     window = SDL_CreateWindow("GGJ2018 LoPacket", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     screen = SDL_GetWindowSurface(window);
-    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
+    render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 256);
     Mix_AllocateChannels(16);
 
     loadAssets();
 
 // Start of a level
     bpm = levelBaseBPM[level];
+
     musicInit(level + 1, bpm);
     playersInit();
+    gameInit();
 
     uint32_t fpsTimeCurrent = SDL_GetTicks();
     uint32_t fpsTimeLast = fpsTimeCurrent;

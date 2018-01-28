@@ -5,8 +5,24 @@
 #include <SDL.h>
 #include <SDL_mixer.h>
 
-extern SDL_Surface * bgBmp;
-extern SDL_Surface * packetBmp;
+extern SDL_Surface * skyBmp;
+extern SDL_Surface * waterBmp;
+extern SDL_Surface * cliffBmp;
+extern SDL_Surface * gearBmp;
+extern SDL_Surface * basketBmp;
+extern SDL_Surface * itemBmp[4];
+extern SDL_Surface * getReadyBmp;
+extern SDL_Surface * vogelBmp[9];
+
+extern SDL_Texture * skyTxt;
+extern SDL_Texture * waterTxt;
+extern SDL_Texture * cliffTxt;
+extern SDL_Texture * gearTxt;
+extern SDL_Texture * basketTxt;
+extern SDL_Texture * itemTxt[4];
+extern SDL_Texture * gearTxt;
+extern SDL_Texture * getReadyTxt;
+extern SDL_Texture * vogelTxt[9];
 
 extern Mix_Chunk * musicTracks[2][6];
 extern Mix_Chunk * musicKeys[3];

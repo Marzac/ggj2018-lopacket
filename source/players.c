@@ -58,9 +58,10 @@ void playersUpdate()
         int channel = CHANNEL_P1K1 + keyNew + 3 * p;
         Mix_PlayChannel(channel, musicKeys[keyNew], 0);
 
-        if (musicBeatWindow)
+        if (musicBeatWindow) {
             player->crankDir = dir;
-        else player->crankScramble = 1;
+            game.gearAnglesNext[p] += 45.0f * dir;
+        }else player->crankScramble = 1;
 
         if (player->crankDir) printf("Player %i, crank dir %i\n", p, player->crankDir);
         if (player->crankScramble) printf("Player %i, scramble\n", p);

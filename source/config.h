@@ -15,5 +15,6 @@
 #include <SDL_mixer.h>
 extern SDL_Window * window;
 extern SDL_Surface * screen;
+extern SDL_Renderer * render;
 
 #endif // CONFIG_H

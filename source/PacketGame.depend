@@ -338,10 +338,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1517057027 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\assets.c
+1517102018 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\assets.c
+	"config.h"
 	"assets.h"
 	<SDL.h>
 	<SDL_mixer.h>
+	<SDL_image.h>
 	<stdio.h>
 
 1508786982 c:\users\fred\documents\projects\ggj2018-lopacket\source\sdl\include\sdl.h
@@ -686,11 +688,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1517058041 c:\users\fred\documents\projects\ggj2018-lopacket\source\assets.h
+1517101930 c:\users\fred\documents\projects\ggj2018-lopacket\source\assets.h
 	<SDL.h>
 	<SDL_mixer.h>
 
-1517058815 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\game.c
+1517102973 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\game.c
 	"config.h"
 	"assets.h"
 	"game.h"
@@ -701,7 +703,7 @@
 	<stdint.h>
 	<math.h>
 
-1517053981 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\music.c
+1517076218 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\music.c
 	"config.h"
 	"assets.h"
 	"game.h"
@@ -710,8 +712,9 @@
 	<stdio.h>
 	<stdlib.h>
 	<stdint.h>
+	<string.h>
 
-1517058447 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\players.c
+1517088959 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\players.c
 	"config.h"
 	"assets.h"
 	"game.h"
@@ -722,7 +725,7 @@
 	<string.h>
 	<stdint.h>
 
-1517054876 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\main.c
+1517089310 source:c:\users\fred\documents\projects\ggj2018-lopacket\source\main.c
 	"config.h"
 	"assets.h"
 	"game.h"
@@ -733,15 +736,21 @@
 	<stdint.h>
 	<sys/time.h>
 
-1517058552 c:\users\fred\documents\projects\ggj2018-lopacket\source\config.h
+1517087053 c:\users\fred\documents\projects\ggj2018-lopacket\source\config.h
 	<SDL.h>
 	<SDL_mixer.h>
 
-1517058125 c:\users\fred\documents\projects\ggj2018-lopacket\source\game.h
+1517095673 c:\users\fred\documents\projects\ggj2018-lopacket\source\game.h
 	<stdint.h>
 
-1517053981 c:\users\fred\documents\projects\ggj2018-lopacket\source\music.h
+1517075471 c:\users\fred\documents\projects\ggj2018-lopacket\source\music.h
 	<stdint.h>
 
 1517054835 c:\users\fred\documents\projects\ggj2018-lopacket\source\players.h
+
+1508772769 c:\users\fred\documents\projects\ggj2018-lopacket\source\sdl_image\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
 

@@ -1,15 +1,30 @@
-
+#include "config.h"
 #include "assets.h"
 
 #include <SDL.h>
 #include <SDL_mixer.h>
+#include <SDL_image.h>
 #include <stdio.h>
 
 /*****************************************************************************/
-SDL_Surface * bgBmp = NULL;
-SDL_Surface * packetBmp = NULL;
+SDL_Surface * skyBmp = NULL;
+SDL_Surface * waterBmp = NULL;
+SDL_Surface * cliffBmp = NULL;
+SDL_Surface * gearBmp = NULL;
+SDL_Surface * basketBmp = NULL;
+SDL_Surface * itemBmp[4];
+SDL_Surface * getReadyBmp;
+SDL_Surface * vogelBmp[9];
 
-Mix_Chunk * bdWav = NULL;
+SDL_Texture * skyTxt;
+SDL_Texture * waterTxt;
+SDL_Texture * cliffTxt;
+SDL_Texture * gearTxt;
+SDL_Texture * basketTxt;
+SDL_Texture * itemTxt[4];
+SDL_Texture * gearTxt;
+SDL_Texture * getReadyTxt;
+SDL_Texture * vogelTxt[9];
 
 Mix_Chunk * musicTracks[2][6];
 Mix_Chunk * musicKeys[3];
@@ -24,8 +39,28 @@ Mix_Chunk * musicGear;
 /*****************************************************************************/
 void loadAssets()
 {
-    bgBmp     = SDL_LoadBMP("assets/bg_small.bmp");
-    packetBmp = SDL_LoadBMP("assets/box.bmp");
+    skyBmp = IMG_Load("assets/sky.png");
+    waterBmp = IMG_Load("assets/water.png");
+    cliffBmp = IMG_Load("assets/cliff.png");
+    gearBmp = IMG_Load("assets/gear.png");
+    basketBmp = IMG_Load("assets/basket.png");
+    itemBmp[0] = IMG_Load("assets/item1.png");
+    getReadyBmp = IMG_Load("assets/getready.png");
+
+    char path[] = "assets/bx-s.png";
+    for (int b = 0; b < 9; b++) {
+        path[8] = b+1 + '0';
+        vogelBmp[b] = IMG_Load(path);
+        vogelTxt[b] = SDL_CreateTextureFromSurface(render, vogelBmp[b]);
+    }
+
+    skyTxt = SDL_CreateTextureFromSurface(render, skyBmp);
+    waterTxt = SDL_CreateTextureFromSurface(render, waterBmp);
+    cliffTxt = SDL_CreateTextureFromSurface(render, cliffBmp);
+    gearTxt = SDL_CreateTextureFromSurface(render, gearBmp);
+    basketTxt = SDL_CreateTextureFromSurface(render, basketBmp);
+    itemTxt[0] = SDL_CreateTextureFromSurface(render, itemBmp[0]);
+    getReadyTxt = SDL_CreateTextureFromSurface(render, getReadyBmp);
 
 // General
     musicTimeBeat = Mix_LoadWAV("assets/music/general/TIME-BEAT.wav");
@@ -48,6 +83,7 @@ void loadAssets()
     musicMonster = Mix_LoadWAV("assets/music/general/MONSTER.wav");
     musicBird = Mix_LoadWAV("assets/music/general/BIRD.wav");
     musicGear = Mix_LoadWAV("assets/music/general/GEAR.wav");
+
 }
 
 void unloadAssets()
